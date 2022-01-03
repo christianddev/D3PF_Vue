@@ -43,7 +43,7 @@ export default {
   computed: {
     skillUrl () {
       const sizes = [21, 42, 64]
-      const host = `http://media.blizzard.com/d3/icons/skills/${sizes[1]}/`
+      const host = `https://media.blizzard.com/d3/icons/skills/${sizes[1]}/`
       return `${host}${this.skill.icon}.png`
     },
     slotClass () {

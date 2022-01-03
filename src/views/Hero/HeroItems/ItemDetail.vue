@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     itemUrl () {
-      const host = 'http://media.blizzard.com/d3/icons/items/large/'
+      const host = 'https://media.blizzard.com/d3/icons/items/large/'
       return `${host}${this.item.icon}.png`
     },
     itemHasGems () {
