@@ -1,8 +1,10 @@
 <template>
   <div class="d-flex align-items-center mb-3">
     <div class="mr-2">
+
       <!-- Slot (identificador de skill) -->
       <span class="slot" :class="slotClass"/>
+
       <!-- La imagen · Skill URL -->
       <img :src="skillUrl" :alt="skill.name">
     </div>
