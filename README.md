@@ -1,4 +1,4 @@
-# D3PF
+# Diable 3 Profile Finder
 Idea original ➡ https://github.com/baumannzone/diablo3-vue-platzi
 
 ## App Live Demo
