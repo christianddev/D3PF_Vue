@@ -2,23 +2,53 @@
   <div class="header-bar">
     <div class="navigation-bar">
       <b-navbar toggleable="lg" type="dark" variant="dark">
-        <b-navbar-brand :to="{ name: 'Home' }">
-          <img src="@/assets/img/diablo-iii.svg" alt="D3" width="30">
-          <span class="font-diablo ml-2">{{title}}</span>
-        </b-navbar-brand>
+        <BrandTitle/>
+        <b-badge
+          id="currentSeason"
+          class="ml-auto"
+          variant="secondary"
+        >
+          {{ currentSeason }}
+        </b-badge>
+
+        <b-tooltip target="currentSeason" triggers="hover" placement="left">
+          <small>Current season</small>
+        </b-tooltip>
+
       </b-navbar>
     </div>
+
+    <BreadcrumbBar/>
 
   </div>
 </template>
 
 <script>
+import { listSeasons } from '@/api/season'
+import BrandTitle from './BrandTitle'
+import BreadcrumbBar from './BreadcrumbBar'
 
 export default {
   name: 'HeaderBar',
+  components: { BreadcrumbBar, BrandTitle },
   data () {
     return {
-      title: process.env.VUE_APP_TITLE
+      currentSeason: null
+    }
+  },
+  created () {
+    const region = 'eu'
+    this.fetchSeasons(region)
+  },
+  methods: {
+    fetchSeasons (region) {
+      listSeasons(region)
+        .then(({ data }) => {
+          this.currentSeason = data.current_season
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 }

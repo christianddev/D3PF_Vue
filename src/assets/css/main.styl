@@ -2,7 +2,6 @@
 // Diablo-Like Font · DiabloHeavy Font
 // ---------------------
 
-// Damos de alta la fuente con el nombre "DiabloHeavy" y cargamos todos los formatos
 @font-face
   font-family "DiabloHeavy"
   src url("../fonts/diabloh.eot")
@@ -15,9 +14,12 @@
   font-style normal
   font-weight normal
 
-// Creamos una clase que tenga de tipografía la fuente de Diablo
 .font-diablo
   font-family "DiabloHeavy", sans-serif
+
+// ---------------------
+// Sprite image · Heroes faces
+// ---------------------
 
 .hero-barbarian,
 .hero-witch-doctor,
@@ -128,6 +130,10 @@
     height 174px
 
 
+// ---------------------
+// Acts
+// ---------------------
+
 .act
   background-image: url('../img/progress.png')
   background-size 500%
@@ -167,10 +173,10 @@
     &.done
       background-position 50px 57px
 
-.hover-cursor-pointer
-  &:hover
-    cursor pointer
 
+// ---------------------
+// Resources
+// ---------------------
 .resource
   .resource-icon
     background-image url('../img/resources.png')
@@ -198,6 +204,9 @@
     &.resource-essence
       background-position: -50px -100px
 
+// ---------------------
+// Active Skills
+// ---------------------
 .active-skills
   .skills
     .slot
@@ -226,3 +235,12 @@
 
       &.slot-6
         background-position: -23px -46px
+
+
+// ---------------------
+// Utils
+// ---------------------
+
+.hover-cursor-pointer
+  &:hover
+    cursor pointer
