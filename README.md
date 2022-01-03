@@ -1,4 +1,4 @@
-# diablo3
+# D3PF
 
 ## Project setup
 ```
