@@ -1,6 +1,10 @@
 # D3PF
+Idea original ➡ https://github.com/baumannzone/diablo3-vue-platzi
 
-## Project setup
+## App Live Demo
+https://d3pf-2-christianddev.netlify.app
+
+### Project setup
 ```
 yarn install
 ```
@@ -30,5 +34,3 @@ yarn test:e2e
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
